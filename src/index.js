@@ -26,20 +26,18 @@ nameTimeline
 		}
 	})
 	.add({
-		targets: '#landing .text',
+		targets: ['#landing .text', '#landing #headline .emoji.wave'],
 		opacity: 1
 	})
 	.add({
-		targets: '#site-header #site-logo',
+		targets: ['#site-header #site-logo'],
 		opacity: 1
 	});
-
-	window.human = false;
 
 	var canvasEl = document.querySelector('.fireworks');
 	var ctx = canvasEl.getContext('2d');
 	var numberOfParticules = 30;
-	var colors = ['#EA2027', '#FFC312', '#0037FF', '#FBF38C'];
+	var colors = ['#EA2027', '#FFC312', '#0037FF', '#FDA7DF'];
 	
 	function setCanvasSize() {
 		canvasEl.width = window.innerWidth * 2;

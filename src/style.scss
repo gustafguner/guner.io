@@ -84,6 +84,20 @@ body {
 
 $primary: #0037FF;
 
+p {
+  font-size: 24px;
+  line-height: 36px;
+  color: rgb(70,70,70);
+  font-weight: 500;
+}
+
+.page-padding {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
 header#site-header {
   width: 100%;
   height: 155px;
@@ -106,29 +120,50 @@ section#landing {
   width: 100%;
   position: relative;
   z-index: 10000;
+  margin-bottom: 180px;
   #headline {
     margin: 0 auto;
-    padding: 70px 0 50px 0;
-    display: table;
+    padding: 70px 0 15px 0;
+    display: flex;
     transform: scale(0);
     opacity: 0;
+    align-items: center;
+    justify-content: center;
+    #hello {
+      position: relative;
+      padding-right: 80px;
+    }
     h1{
       text-align: center;
       color: $primary;
       font-size: 62px;
+      line-height: 78px;
       font-weight: 500;
       margin: 0;
       letter-spacing: 1px;
       font-weight: bold;
     }
+    .emoji{
+      &.wave{
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 2;
+        font-size: 56px;
+        line-height: 85px;
+      }
+    }
   }
   .text {
     text-align: center;
     opacity: 0;
+    margin: 0 auto;
+    max-width: 600px;
     p {
       font-size: 30px;
       color: rgb(50,50,50);
       font-weight: 500;
+      line-height: 46px;
     }
   }
 }
@@ -150,6 +185,48 @@ section#landing {
       border-left:solid 21px transparent;
     }
   }
+}
+
+section h2 {
+  color: rgb(150,150,150);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 2px;
+}
+
+section {
+  .title {
+    h2 {
+      color: rgb(150,150,150);
+      font-weight: 500;
+      text-transform: uppercase;
+      font-size: 18px;
+      line-height: 30px;
+      letter-spacing: 2px;
+    }
+  }
+  .list {
+    width: 100%;
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        width: 100%;
+      }
+    }
+  }
+  .text {
+    p {
+      
+    }
+  }
+}
+
+section#selected-work {
+  padding-top: 120px;
 }
 
 canvas.fireworks {
