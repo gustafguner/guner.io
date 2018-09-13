@@ -86,7 +86,7 @@ $primary: #0037FF;
 
 header#site-header {
   width: 100%;
-  height: 120px;
+  height: 155px;
   background-color: white;
   align-items: center;
   padding: 50px;
@@ -104,8 +104,11 @@ header#site-header {
 
 section#landing {
   width: 100%;
+  position: relative;
+  z-index: 10000;
   #headline {
-    margin: 70px auto 50px auto;
+    margin: 0 auto;
+    padding: 70px 0 50px 0;
     display: table;
     transform: scale(0);
     opacity: 0;
@@ -147,4 +150,14 @@ section#landing {
       border-left:solid 21px transparent;
     }
   }
+}
+
+canvas.fireworks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+
 }
