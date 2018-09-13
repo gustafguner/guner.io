@@ -8,14 +8,22 @@ nameTimeline
     targets: '#landing #headline',
 		easing: 'easeOutExpo',
 		opacity: 0,
-		scale: 0
+		scale: 0,
+		begin: function () {
+			
+		}
   })
   .add({
     targets: '#landing #headline',
     scale: 1,
 		easing: 'easeOutExpo',
 		delay: 100,
-		opacity: 1
+		opacity: 1,
+		begin: function() {
+			var headline = document.getElementById('landing');
+			animateParticules(headline.offsetLeft + (headline.offsetWidth/2), headline.offsetTop + (headline.offsetHeight/2));
+			render.play();
+		}
 	})
 	.add({
 		targets: '#landing .text',
@@ -31,9 +39,6 @@ nameTimeline
 	var canvasEl = document.querySelector('.fireworks');
 	var ctx = canvasEl.getContext('2d');
 	var numberOfParticules = 30;
-	var pointerX = 0;
-	var pointerY = 0;
-	var tap = ('ontouchstart' in window || navigator.msMaxTouchPoints) ? 'touchstart' : 'mousedown';
 	var colors = ['#EA2027', '#FFC312', '#0037FF', '#FBF38C'];
 	
 	function setCanvasSize() {
@@ -44,13 +49,8 @@ nameTimeline
 		canvasEl.getContext('2d').scale(2, 2);
 	}
 	
-	function updateCoords(e) {
-		pointerX = e.clientX || e.touches[0].clientX;
-		pointerY = e.clientY || e.touches[0].clientY;
-	}
-	
 	function setParticuleDirection(p) {
-		var angle = anime.random(0, 360) * Math.PI / 180;
+		var angle = anime.random(0, 90) * Math.PI / 180;
 		var value = anime.random(250, 500);
 		var radius = [-1, 1][anime.random(0, 1)] * value;
 		return {
@@ -104,25 +104,14 @@ nameTimeline
 			ctx.clearRect(0, 0, canvasEl.width, canvasEl.height);
 		}
 	});
-	
-	document.addEventListener(tap, function(e) {
-		window.human = true;
-		render.play();
-		updateCoords(e);
-		animateParticules(pointerX, pointerY);
-	}, false);
-
-	var headline = document.getElementById('headline');
-	animateParticules(headline.offsetLeft + (headline.offsetWidth/2), headline.offsetTop + (headline.offsetHeight/2));
-	render.play();
 
 function autoClick() {
 	animateParticules(
-		window.outerWidth / 2, 0
+		window.outerWidth / 2, 400
 	);
 	anime({duration: anime.random(2000,4000)}).finished.then(autoClick);
 }
-	autoClick();
+	//autoClick();
 	console.log(window.outerWidth);
 	var centerX = window.outerWidth / 2;
 	var centerY = window.outerHeight / 2;
