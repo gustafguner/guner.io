@@ -110,9 +110,15 @@ header#site-header {
   position: relative;
   z-index: -2;
   #site-logo {
-    width: 55px;
     height: 55px;
     opacity: 0;
+    h1 {
+      font-size: 18px;
+      line-height: 18px;
+      font-weight: 500;
+      color: #d0d0d0;
+      margin: 0;
+    }
     svg {
       width: 100%;
       height: 100%;
