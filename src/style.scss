@@ -89,7 +89,7 @@ $primary: #0037FF;
 
 p {
   font-size: 24px;
-  line-height: 36px;
+  line-height: 36px; 
   color: rgb(70,70,70);
   font-weight: 500;
 }
@@ -212,14 +212,19 @@ section {
       letter-spacing: 2px;
     }
   }
-  .list {
+  .list{
     width: 100%;
-    ul {
+    ul{
       list-style: none;
       margin: 0;
       padding: 0;
-      li {
+      li{
         width: 100%;
+        p {
+          span.role {
+            color: rgb(140,140,140);
+          }
+        }
       }
     }
   }
