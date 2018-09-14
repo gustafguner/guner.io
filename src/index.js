@@ -8,10 +8,7 @@ nameTimeline
     targets: '#landing #headline',
 		easing: 'easeOutExpo',
 		opacity: 0,
-		scale: 0,
-		begin: function () {
-			
-		}
+		scale: 0
   })
   .add({
     targets: '#landing #headline',
@@ -21,14 +18,19 @@ nameTimeline
 		opacity: 1,
 		begin: function() {
 			var headline = document.getElementById('landing');
-			animateParticules(headline.offsetLeft + (headline.offsetWidth/2), headline.offsetTop + (headline.offsetHeight/2));
-			render.play();
+      animateParticules(headline.offsetLeft + (headline.offsetWidth/2), headline.offsetTop + (headline.offsetHeight/2));
 		}
 	})
 	.add({
-		targets: ['#landing .text', '#landing #headline .emoji.wave'],
-		opacity: 1
-	})
+		targets: ['#landing .text'],
+    opacity: 1,
+    duration: 600
+  })
+  .add({
+    targets: ['section#bio'],
+    opacity: 1,
+    duration: 600
+  })
 	.add({
 		targets: ['#site-header #site-logo'],
 		opacity: 1

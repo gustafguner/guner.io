@@ -225,6 +225,10 @@ section {
   }
 }
 
+section#bio {
+  opacity: 0;
+}
+
 canvas.fireworks {
   position: absolute;
   top: 0;
