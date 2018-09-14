@@ -27,14 +27,16 @@ nameTimeline
     duration: 600
   })
   .add({
-    targets: ['section#bio'],
+    targets: ['section#bio', 'section#selected-work', 'section#skills'],
     opacity: 1,
-    duration: 600
+    duration: 800,
+    offset: '-=500'
   })
-	.add({
-		targets: ['#site-header #site-logo'],
-		opacity: 1
-	});
+  .add({
+    targets: ['#site-header #site-logo'],
+    opacity: 1,
+    offset: '-=600'
+  });
 
 	var canvasEl = document.querySelector('.fireworks');
 	var ctx = canvasEl.getContext('2d');
