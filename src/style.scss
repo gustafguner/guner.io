@@ -137,16 +137,16 @@ section#landing {
     #hello {
       position: relative;
       padding-right: 80px;
-    }
-    h1{
-      text-align: center;
-      color: $primary;
-      font-size: 62px;
-      line-height: 78px;
-      font-weight: 500;
-      margin: 0;
-      letter-spacing: 1px;
-      font-weight: bold;
+      h1{
+        text-align: center;
+        color: $primary;
+        font-size: 62px;
+        line-height: 78px;
+        font-weight: 500;
+        margin: 0;
+        letter-spacing: 1px;
+        font-weight: bold;
+      }
     }
     .emoji{
       &.wave{
@@ -173,34 +173,6 @@ section#landing {
   }
 }
 
-.shape {
-  &.triangle {
-    position: relative;
-    width:0;
-    border-bottom:solid 50px $primary;
-    border-right:solid 30px transparent;
-    border-left:solid 30px transparent;
-    .empty {
-      position: absolute;
-      top:9px;
-      left:-21px;
-      width:0;
-      border-bottom:solid 36px white;
-      border-right:solid 21px transparent;
-      border-left:solid 21px transparent;
-    }
-  }
-}
-
-section h2 {
-  color: rgb(150,150,150);
-  font-weight: 500;
-  text-transform: uppercase;
-  font-size: 18px;
-  line-height: 30px;
-  letter-spacing: 2px;
-}
-
 section {
   .title {
     h2 {
@@ -221,6 +193,13 @@ section {
       li{
         width: 100%;
         p {
+          a {
+            color: rgb(70,70,70);
+            text-decoration: none;
+            &:hover {
+              color: black;
+            }
+          }
           span.role {
             color: rgb(140,140,140);
           }
