@@ -86,6 +86,7 @@ body {
 }
 
 $primary: #0037FF;
+$primary-dark: #000dd2;
 
 p {
   font-size: 24px;
@@ -220,6 +221,10 @@ section {
         text-decoration: none;
         border-bottom: 3px solid $primary;
         font-weight: 600;
+        &:hover {
+          color: $primary-dark;
+          border-color: $primary-dark;
+        }
       }
     }
   }
