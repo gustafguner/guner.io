@@ -241,5 +241,30 @@ canvas.fireworks {
   width: 100vw;
   height: 100vh;
   z-index: -1;
+}
 
+@media (max-width: 650px) {
+  section#landing{
+    #headline{
+      #hello{
+        padding-right: 70px;
+        h1{
+          font-size: 48px;
+          line-height: 64px;
+        }
+      }
+      .emoji{
+        &.wave{
+          font-size: 48px;
+          line-height: 77px;
+        }
+      }
+    }
+    .text{
+      p{
+        font-size: 26px;
+        line-height: 42px;
+      }
+    }
+  }
 }
