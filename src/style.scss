@@ -70,6 +70,13 @@
   font-style: normal;
 }
 
+$primary: #0037FF;
+$primary-dark: #000dd2;
+
+*{
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background: #fff;
@@ -81,18 +88,13 @@ body {
     margin-bottom: 120px;
   }
 }
-*{
-  box-sizing: border-box;
-}
-
-$primary: #0037FF;
-$primary-dark: #000dd2;
 
 p {
   font-size: 24px;
-  line-height: 36px; 
+  line-height: 38px; 
   color: rgb(70,70,70);
   font-weight: 500;
+  margin: 24px 0;
 }
 
 .page-padding-center {
@@ -158,12 +160,18 @@ section#landing {
     }
     .emoji{
       &.wave{
+        width: 65px;
+        height: 65px;
         position: absolute;
         right: 0;
         top: 0;
         z-index: 2;
         font-size: 56px;
         line-height: 85px;
+        img {
+          float: left;
+          width: 100%;
+        }
       }
     }
   }
@@ -183,6 +191,7 @@ section#landing {
 
 section {
   .title {
+    margin-bottom: 20px;
     h2 {
       color: rgb(150,150,150);
       font-weight: 500;
@@ -190,6 +199,7 @@ section {
       font-size: 18px;
       line-height: 30px;
       letter-spacing: 2px;
+      margin: 0;
     }
   }
   .list{
@@ -200,7 +210,12 @@ section {
       padding: 0;
       li{
         width: 100%;
+        margin-bottom: 20px;
+        &:last-child{
+          margin-bottom: 0;
+        }
         p {
+          margin: 0;
           a {
             color: rgb(70,70,70);
             text-decoration: none;
@@ -217,6 +232,7 @@ section {
   }
   .text {
     p {
+      margin: 0;
       a {
         color: $primary;
         text-decoration: none;
@@ -249,6 +265,11 @@ canvas.fireworks {
     font-size: 22px;
     line-height: 34px;
   }
+  body{
+    &>section{
+      margin-bottom: 70px;
+    }
+  }
   .page-padding, .page-padding-center{
     padding-left: 25px;
     padding-right: 25px;
@@ -264,6 +285,8 @@ canvas.fireworks {
       }
       .emoji{
         &.wave{
+          width: 54px;
+          height: 54px;
           font-size: 48px;
           line-height: 77px;
         }
@@ -273,6 +296,47 @@ canvas.fireworks {
       p{
         font-size: 26px;
         line-height: 42px;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  header#site-header{
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  section#landing{
+    #headline{
+      #hello{
+        padding-right: 0;
+        .emoji{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  p{
+    font-size: 20px;
+    line-break: 32px;
+  }
+  section#landing{
+    margin-bottom: 130px;
+    #headline{
+      #hello{
+        h1{
+          font-size: 40px;
+          line-height: 56px;
+        }
+      }
+    }
+    .text{
+      p{
+        font-size: 24px;
+        line-height: 40px;
       }
     }
   }
