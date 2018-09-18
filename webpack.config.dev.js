@@ -47,13 +47,27 @@ module.exports = {
 			]
 		},
     {
-      test: /\.(jpe?g|png|gif|svg|ico)$/i,
+      test: /\.(jpe?g|png|gif|svg)$/i,
+      exclude: /(\.\/src\/assets\/favicons)/,
       use: [
         {
           loader: 'file-loader', 
           options: { 
             name: '[name].[ext]', 
             outputPath: './assets/images/' 
+          } 
+        }
+      ]
+    },
+    {
+      test: /\.(png|ico)$/i,
+      exclude: /(\.\/src\/assets\/images)/,
+      use: [
+        {
+          loader: 'file-loader', 
+          options: { 
+            name: '[name].[ext]', 
+            outputPath: './assets/favicons/' 
           } 
         }
       ]
