@@ -1,101 +1,130 @@
 <!doctype html>
 <html>
-  <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110331862-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'UA-110331862-1');
-    </script>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Gustaf Gunér – Full Stack Developer, UI/UX-designer</title>
-    <meta name="description" content="I'm a full stack developer and a MSc student of Computer Science at KTH Royal Institute of Technology. I develop and design digital products. I'm the founder of Publector. I have a passion for software development, design and entrepreneurship.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">   
-    <meta name="og:image" content="<%= require("./assets/favicons/mstile-310x310.png") %>"/>
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="<%= require("./assets/favicons/apple-touch-icon-57x57.png") %>" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<%= require("./assets/favicons/apple-touch-icon-114x114.png") %>" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<%= require("./assets/favicons/apple-touch-icon-72x72.png") %>" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<%= require("./assets/favicons/apple-touch-icon-144x144.png") %>" />
-    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="<%= require("./assets/favicons/apple-touch-icon-60x60.png") %>" />
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="<%= require("./assets/favicons/apple-touch-icon-120x120.png") %>" />
-    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="<%= require("./assets/favicons/apple-touch-icon-76x76.png") %>" />
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="<%= require("./assets/favicons/apple-touch-icon-152x152.png") %>" />
-    <link rel="icon" type="image/png" href="<%= require("./assets/favicons/favicon-196x196.png") %>" sizes="196x196" />
-    <link rel="icon" type="image/png" href="<%= require("./assets/favicons/favicon-96x96.png") %>" sizes="96x96" />
-    <link rel="icon" type="image/png" href="<%= require("./assets/favicons/favicon-32x32.png") %>" sizes="32x32" />
-    <link rel="icon" type="image/png" href="<%= require("./assets/favicons/favicon-16x16.png") %>" sizes="16x16" />
-    <link rel="icon" type="image/png" href="<%= require("./assets/favicons/favicon-128.png") %>" sizes="128x128" />
-    <meta name="application-name" content="&nbsp;"/>
-    <meta name="msapplication-TileColor" content="#FFFFFF" />
-    <meta name="msapplication-TileImage" content="<%= require("./assets/favicons/mstile-144x144.png") %>" />
-    <meta name="msapplication-square70x70logo" content="<%= require("./assets/favicons/mstile-70x70.png") %>" />
-    <meta name="msapplication-square150x150logo" content="<%= require("./assets/favicons/mstile-150x150.png") %>" />
-    <meta name="msapplication-wide310x150logo" content="<%= require("./assets/favicons/mstile-310x150.png") %>" />
-    <meta name="msapplication-square310x310logo" content="<%= require("./assets/favicons/mstile-310x310.png") %>" />
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110331862-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-    <link rel="shortcut icon" href="<%= require("./assets/favicons/favicon.ico") %>">
-    
-  </head>
-  <body>
-    <canvas class="fireworks"></canvas>
-    <header id="site-header" class="page-padding">
-      <div id="site-logo">
-        <h1>Gustaf Gunér – Full Stack Developer, UI/UX-designer</h1>
+    gtag('config', 'UA-110331862-1');
+  </script>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Gustaf Gunér – Full Stack Developer, UI/UX-designer</title>
+  <meta name="description" content="I'm a full stack developer and a MSc student of Computer Science at KTH Royal Institute of Technology. I develop and design digital products. I'm the founder of Publector. I have a passion for software development, design and entrepreneurship.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="og:image" content="<%= require(" ./assets/favicons/mstile-310x310.png") %>"/>
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="<%= require(" ./assets/favicons/apple-touch-icon-57x57.png")
+    %>" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<%= require(" ./assets/favicons/apple-touch-icon-114x114.png")
+    %>" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<%= require(" ./assets/favicons/apple-touch-icon-72x72.png")
+    %>" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<%= require(" ./assets/favicons/apple-touch-icon-144x144.png")
+    %>" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="<%= require(" ./assets/favicons/apple-touch-icon-60x60.png")
+    %>" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="<%= require(" ./assets/favicons/apple-touch-icon-120x120.png")
+    %>" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="<%= require(" ./assets/favicons/apple-touch-icon-76x76.png")
+    %>" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="<%= require(" ./assets/favicons/apple-touch-icon-152x152.png")
+    %>" />
+  <link rel="icon" type="image/png" href="<%= require(" ./assets/favicons/favicon-196x196.png") %>" sizes="196x196" />
+  <link rel="icon" type="image/png" href="<%= require(" ./assets/favicons/favicon-96x96.png") %>" sizes="96x96" />
+  <link rel="icon" type="image/png" href="<%= require(" ./assets/favicons/favicon-32x32.png") %>" sizes="32x32" />
+  <link rel="icon" type="image/png" href="<%= require(" ./assets/favicons/favicon-16x16.png") %>" sizes="16x16" />
+  <link rel="icon" type="image/png" href="<%= require(" ./assets/favicons/favicon-128.png") %>" sizes="128x128" />
+  <meta name="application-name" content="&nbsp;" />
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="<%= require(" ./assets/favicons/mstile-144x144.png") %>" />
+  <meta name="msapplication-square70x70logo" content="<%= require(" ./assets/favicons/mstile-70x70.png") %>" />
+  <meta name="msapplication-square150x150logo" content="<%= require(" ./assets/favicons/mstile-150x150.png") %>" />
+  <meta name="msapplication-wide310x150logo" content="<%= require(" ./assets/favicons/mstile-310x150.png") %>" />
+  <meta name="msapplication-square310x310logo" content="<%= require(" ./assets/favicons/mstile-310x310.png") %>" />
+
+  <link rel="shortcut icon" href="<%= require(" ./assets/favicons/favicon.ico") %>">
+
+</head>
+
+<body>
+  <canvas class="fireworks"></canvas>
+  <header id="site-header" class="page-padding">
+    <div id="site-logo">
+      <h1>Gustaf Gunér – Full Stack Developer, UI/UX-designer</h1>
+    </div>
+  </header>
+
+  <section id="landing">
+    <div id="headline">
+      <div id="hello">
+        <h1>Hi, I'm Gustaf</h1>
+        <div class="emoji wave"><img src="<%= require(" ./assets/images/waving-hand-transparent.png") %>"></div>
       </div>
-    </header>
+    </div>
+    <div class="text">
+      <p>I build digital products</p>
+    </div>
+  </section>
 
-    <section id="landing">
-      <div id="headline">
-        <div id="hello">
-          <h1>Hi, I'm Gustaf</h1>
-          <div class="emoji wave"><img src="<%= require("./assets/images/waving-hand-transparent.png") %>"></div>
-        </div>
+  <section id="bio">
+    <div class="page-padding-center">
+      <div class="title">
+        <h2>About me</h2>
       </div>
       <div class="text">
-        <p>I build digital products</p>
+        <p>I'm a full stack developer and a MSc student of Computer Science at KTH Royal Institute of Technology. I
+          develop and design digital products. I'm the founder of <a href="https://publector.org" target="_blank">Publector</a>.
+          I have a passion for software development, design and entrepreneurship. In my spare time I play and create
+          music. Want to get in touch? <a href="mailto:gustaf@publector.org">Send me an email</a> or contact me on <a
+            href="https://github.com/gustafguner" target="_blank">GitHub</a>, <a href="https://www.linkedin.com/in/gustaf-guner/"
+            target="_blank">LinkedIn</a> or <a href="https://soundcloud.com/gustafguner" target="_blank">SoundCloud</a>.</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="bio">
-      <div class="page-padding-center">
-        <div class="title">
-          <h2>About me</h2>
-        </div>
-        <div class="text">
-          <p>I'm a full stack developer and a MSc student of Computer Science at KTH Royal Institute of Technology. I develop and design digital products. I'm the founder of <a href="https://publector.org" target="_blank">Publector</a>. I have a passion for software development, design and entrepreneurship. In my spare time I play and create music. Want to get in touch? <a href="mailto:gustaf@publector.org">Send me an email</a> or contact me on <a href="https://github.com/gustafguner" target="_blank">GitHub</a>, <a href="https://www.linkedin.com/in/gustaf-guner/" target="_blank">LinkedIn</a> or <a href="https://soundcloud.com/gustafguner" target="_blank">SoundCloud</a>.</p>
-        </div>
+  <section id="selected-work">
+    <div class="page-padding-center">
+      <div class="title">
+        <h2>A selection of projects</h2>
       </div>
-    </section>
+      <div class="list">
+        <ul>
+          <li>
+            <p><a href="https://publector.org/" target="_blank">Publector</a> – <span class="role">Development,
+                UI/UX-design</span></p>
+          </li>
+          <li>
+            <p><a href="http://brainaccounting.se/" target="_blank">Brain Accounting</a> – <span class="role">Development</span></p>
+          </li>
+          <li>
+            <p><a href="http://etcstores.se/" target="_blank">ETC Stores</a> – <span class="role">Development</span></p>
+          </li>
+          <li>
+            <p><a href="https://gustafguner.github.io/angular-tooltip/" target="_blank">angular-tooltip</a> – <span
+                class="role">Development, UI/UX-design</span></p>
+          </li>
+          <li>
+            <p><a href="https://scanddev.se/" target="_blank">Scandinavian Development Series</a> – <span class="role">Development</span></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-    <section id="selected-work">
-      <div class="page-padding-center">
-        <div class="title">
-          <h2>A selection of projects</h2>
-        </div>
-        <div class="list">
-          <ul>
-            <li><p><a href="https://publector.org/" target="_blank">Publector</a> – <span class="role">Development, UI/UX-design</span></p></li>
-            <li><p><a href="http://brainaccounting.se/" target="_blank">Brain Accounting</a> – <span class="role">Development</span></p></li>
-            <li><p><a href="http://etcstores.se/" target="_blank">ETC Stores</a> – <span class="role">Development</span></p></li>
-            <li><p><a href="https://gustafguner.github.io/angular-tooltip/" target="_blank">angular-tooltip</a> – <span class="role">Development, UI/UX-design</span></p></li>
-            <li><p><a href="https://scanddev.se/" target="_blank">Scandinavian Development Series</a> – <span class="role">Development</span></p></li>
-          </ul>
-        </div>
+  <section id="skills">
+    <div class="page-padding-center">
+      <div class="title">
+        <h2>Skills</h2>
       </div>
-    </section>
+      <div class="text">
+        <p>HTML, CSS, Sass, JavaScript, Node.js, Express.js, Angular, React, Redux, Vue, Git, Java, PHP, WordPress,
+          SEO, SQL, MongoDB, UI/UX-design, Photoshop.</p>
+      </div>
+    </div>
+  </section>
+</body>
 
-    <section id="skills">
-      <div class="page-padding-center">
-        <div class="title">
-          <h2>Skills</h2>
-        </div>
-        <div class="text">
-          <p>HTML, CSS, Sass, JavaScript, Node.js, Express.js, Angular, React, Vue, Git, Java, PHP, WordPress, SEO, SQL, MongoDB, UI/UX-design, Photoshop.</p>
-        </div>
-      </div>
-    </section>
-  </body>
 </html>
