@@ -1,5 +1,5 @@
 # guner.io
-The website [guner.io](https://guner.io).
+The website [guner.io](http://guner.io).
 
 ## Setup
 ```sh
